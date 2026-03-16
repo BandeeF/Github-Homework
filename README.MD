@@ -14,10 +14,16 @@
 
 1.  Futtasd a következő parancsot:
 
-    ``` bash
-    docker run -p 8080:80 -d `DOCKER_USERNAME`/homework
-    ```
+    docker run -p 8080:80 -d ajdent/homework:latest
 
 2.  Nyisd meg a böngészőt, és navigálj ide:
 
         http://localhost:8080
+
+# Fájlok leírása
+- .github/workflows/docker-build-push.yml
+    A Github Actions leíró állomány
+- Dockerfile
+    A docker image építési lépéseit leíró állomány
+- index.html
+    Az elkészült image-et elindítva a konténer egy Nginx szervert futtat, amelynek ez lesz a kezdőoldala
